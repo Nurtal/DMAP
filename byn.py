@@ -2,6 +2,11 @@
 from pgmpy.models import BayesianNetwork
 from pgmpy.factors.discrete import TabularCPD
 from pgmpy.inference import VariableElimination
+import matplotlib.pyplot as plt
+import networkx as nx
+
+
+
 
 
 def trash():
@@ -31,6 +36,24 @@ def trash():
     # Par exemple, calculer P(T = Oui | F = Oui)
     result = inference.query(variables=['T'], evidence={'F': 1})
 
+
+
+
+def plot_model(model):
+    """ """
+    
+    G = nx.DiGraph()
+    edges = model.edges()
+    G.add_edges_from(edges)
+
+    # Positionner les noeuds du graphe
+    pos = nx.spring_layout(G)  # Ou utilise nx.kamada_kaway_layout(G) pour une autre disposition
+
+    # Dessiner le graphe
+    plt.figure(figsize=(8, 6))
+    nx.draw(G, pos, with_labels=True, node_size=3000, node_color='lightblue', font_size=15, font_weight='bold', arrows=True, arrowsize=20)
+    plt.title('Réseau Bayésien')
+    plt.show()
 
 
 def shtrmp_model():
@@ -84,10 +107,10 @@ def shtrmp_model():
     inference = VariableElimination(model)
 
     result = inference.query(variables=['Fever'], evidence={'F35': 1, 'F22':0})
-
     print(result)
-    
 
+    plot_model(model)
+    
     
 
 
