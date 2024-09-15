@@ -1,3 +1,5 @@
 pgmpy
 matplotlib
 networkx
+transformers
+spacy

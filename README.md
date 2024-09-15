@@ -17,3 +17,10 @@ Playing with the concept
 ## Feedback
  - Les outils types spacy sont chouettes pour extraires des relations dans les phrases simples mais pas dans les trucs torturés des publis : Utilisation de LLM pour simplifier & clarifier le contenu -> spacy pour extraire à partir de phrases simples et courtes
 
+
+## Approche Via Reseau Bayesien
+### Plan
+
+-------     -----------------------       ------------------------------------        -----------------
+| TXT |---> | Reformulation (LLM) |-----> | Parse (NLP & Spacy, langchain ?) |------> | Build Network |
+-------     -----------------------       ------------------------------------        -----------------
