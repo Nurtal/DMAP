@@ -1,0 +1,90 @@
+Here is the output:
+
+* Fever is a symptom of the disease.
+* The disease relies on the activation of B1 factor.
+* The activation of B1 factor is caused by F22.
+* The activation of B1 factor is caused by F35.
+
+Let me know if this meets your requirements!
+---------------------------------
+Here is the list of atomic statements that capture all the relationships described:
+
+* Fever is a symptom of the disease.
+* The disease relies on the activation of B1 factor.
+* The activation of B1 factor relies on F22.
+* The activation of B1 factor relies on F35.
+
+Let me know if this meets your requirements!
+---------------------------------
+Here is the output:
+
+* Fever is a symptom of the disease.
+* The disease has fever as its main symptom.
+* The activation of B1 factor causes fever.
+* F22 is responsible for the activation of B1.
+* F35 is responsible for the activation of B1.
+* The activation of B1 relies on F22 and F35.
+---------------------------------
+Here is the list of atomic statements that capture all the relationships described:
+
+1. Fever is a main symptom of the disease.
+2. The activation of B1 factor relies on F22.
+3. The activation of B1 factor relies on F35.
+4. The disease includes fever as a symptom.
+5. The activation of B1 factor causes fever.
+
+Let me know if you need any further assistance!
+---------------------------------
+Here is the parsed output:
+
+* Fever is a symptom of the disease.
+* The activation of B1 factor relies on F22.
+* The activation of B1 factor relies on F35.
+* The activation of B1 factor causes fever.
+
+Let me know if you need any further clarification!
+---------------------------------
+Here is the parsed output:
+
+* Fever is a symptom of the disease.
+* The disease relies on the activation of B1 factor.
+* F22 is responsible for the activation of B1.
+* F35 is responsible for the activation of B1.
+
+Let me know if this meets your requirements!
+---------------------------------
+Here is the parsed output:
+
+* Fever is a symptom of the disease.
+* The disease relies on the activation of B1 factor.
+* The activation of B1 factor relies on F22.
+* The activation of B1 factor relies on F35.
+
+Let me know if this meets your requirements!
+---------------------------------
+Here is the output:
+
+* Fever is a symptom of the disease.
+* The activation of B1 factor causes fever.
+* F22 is responsible for the activation of B1.
+* F35 is responsible for the activation of B1.
+
+Let me know if this meets your requirements!
+---------------------------------
+Here is the list of atomic statements that capture all the relationships described:
+
+* Fever is a symptom of the disease.
+* The activation of B1 factor causes fever.
+* F22 is responsible for the activation of B1.
+* F35 is responsible for the activation of B1.
+
+Let me know if this meets your requirements!
+---------------------------------
+Here is the parsed text into atomic statements that capture all the relationships described:
+
+* Fever is a symptom of the disease.
+* The activation of B1 factor causes fever.
+* The activation of B1 factor relies on F22.
+* The activation of B1 factor relies on F35.
+* F22 and F35 are responsible for the activation of B1.
+---------------------------------
