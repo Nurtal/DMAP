@@ -3,3 +3,6 @@ matplotlib
 networkx
 transformers
 spacy
+langchain
+ollama
+langchain-community
