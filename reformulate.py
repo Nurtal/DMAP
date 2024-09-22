@@ -1,17 +1,15 @@
 from langchain_community.llms import Ollama
 import re
 
-def reformulate(text):
-    """
+def reformulate(text:str) -> str:
+    """Use LLM to split a text into reformulated sentennces
 
+    Args:
 
-    output attendu pour le test :
-    
-    sentence_list = [
-        'B1 depend on F35',
-        'B1 depend on F22',
-        'Fever is induced by B1'
-    ]
+        text (str) : text to simplify
+
+    Returns:
+        (str) : answer from the LLM
     
     """
 
@@ -79,6 +77,51 @@ def parse_llm_output(llm_output:str) -> list:
 
 
 
+def clean_sentence(sentence:str) -> str:
+    """Clean sentence, try to simplify it for further parsing
+
+    Args:
+        sentence (str) : the sentence to clean*
+
+    Returns:
+        (str) : answer of the llm
+
+
+    Dev Notes:
+
+        - example input:
+             
+            * Fever is a symptom of the disease.
+            * The disease relies on the activation of B1 factor.
+            * The activation of B1 factor is caused by F22.
+            * The activation of B1 factor is caused by F35.
+
+        - targeted output:
+
+            'B1 depend on F35',
+            'B1 depend on F22',
+            'Fever is induced by B1'
+    """
+
+    llm = Ollama(model="llama3:70b")
+    
+    # stage 1
+    prompt = f"""
+
+    [INSTRUCTION] : Reformulate the following sentence using by simplifying it and use only the words 'depends', 'induce', 'involve' to describe relations between elements.
+    [SENTENCE] : {sentence}
+
+    [OUTPUT]: 
+    """
+    answer = llm.invoke(prompt)
+
+    print(answer)
+    print("-"*42)
+
+    return answer
+    
+
+
 
 
 if __name__ == "__main__":
@@ -99,4 +142,5 @@ if __name__ == "__main__":
         sentence_list = parse_llm_output(text)
         for s in sentence_list:
             print(s)
+            clean_sentence(s)
 
